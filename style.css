@@ -1,0 +1,27 @@
+body, html{
+  font-family: 'Roboto', sans-serif;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.firstPage{
+  width: 100%;
+  height: calc(100vh - 10%);
+  text-align: center;
+  font-weight: lighter;
+  padding: 5% 0;
+}
+
+.firstPage h1{
+  font-weight: lighter;
+  font-size: 24px;
+}
+
+
+.downloadImg{
+  max-height: 50px;
+  margin: 5px;
+}
