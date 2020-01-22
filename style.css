@@ -7,21 +7,83 @@ body, html{
   margin: 0;
 }
 
-.firstPage{
-  /* width: 100%;
-  height: calc(100vh - 10%); */
-  text-align: center;
-  font-weight: lighter;
-  /* padding: 5% 0; */
+nav{
 }
+
+nav ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 20px;
+}
+
+nav ul li{
+	list-style-type: none;
+	flex: 0 0 150px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.firstPage{
+	width: 100%;
+    height: 100vh;
+	text-align: center;
+	font-weight: lighter;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: -60px;
+  }
 
 .firstPage h1{
   font-weight: lighter;
   font-size: 24px;
 }
 
+.logo{
+	width:  313px;
+	text-align: center;
+}
 
 .downloadImg{
   max-height: 50px;
   margin: 5px;
+}
+
+.secondPage{
+	width: 100%;
+	height: 100vh;
+}
+
+.secondPage section{
+	border-top:  10px solid rgba(255,255,255, 0.1);
+	border-bottom:  10px solid rgba(255,255,255, 0.1);
+	padding: 50px 0 ;
+	display: flex;
+}
+
+.secondPage .left{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.secondPage .right{
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	padding: 0 50px;
+}
+
+.secondPage .right h2{
+	font-size: 2.7rem;
+	margin: 0;
+}
+
+.secondPage .right h3{
+	font-weight: 400;
 }
