@@ -1,28 +1,14 @@
 body, html{
   font-family: 'Roboto', sans-serif;
-  background: #000;
+  /*background: #000;*/
   color: #fff;
   width: 100%;
   height: 100%;
   margin: 0;
 }
 
-nav{
-}
-
-nav ul{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 0;
-	padding: 20px;
-}
-
-nav ul li{
-	list-style-type: none;
-	flex: 0 0 150px;
-	text-align: center;
-	font-weight: bold;
+a{
+	text-decoration: none;
 }
 
 .firstPage{
@@ -42,8 +28,26 @@ nav ul li{
   font-size: 24px;
 }
 
+.firstPage .backgroundVideo{
+	position: absolute;
+  	right: 0;
+ 	bottom: 0;
+  	min-width: 100%;
+  	min-height: 100%;
+  	z-index: -1;
+  	background: #000;
+  	overflow: hidden;
+}
+
+.firstPage .backgroundVideo video{
+	filter: blur(5px) brightness(.4);
+	margin: -5px -10px -10px -5px;
+}
+
+
 .logo{
-	width:  313px;
+	width: 313px;
+	height: auto;
 	text-align: center;
 }
 
@@ -52,23 +56,27 @@ nav ul li{
   margin: 5px;
 }
 
-.secondPage{
+.allSections{
 	width: 100%;
-	height: 100vh;
-}
-
-.secondPage section{
-	border-top:  10px solid rgba(255,255,255, 0.1);
-	border-bottom:  10px solid rgba(255,255,255, 0.1);
+	border-top: 10px solid rgba(255,255,255, 0.1);
 	padding: 50px 0 ;
 	display: flex;
+	background: #000;
+}
+
+.allSections .text{
+	max-width: 600px;
 }
 
 .secondPage .left{
 	flex: 1;
 	display: flex;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
+}
+
+.secondPage .left img{
+	margin-right: 50px;
 }
 
 .secondPage .right{
@@ -76,7 +84,40 @@ nav ul li{
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	padding: 0 50px;
+}
+
+/*Third Page*/
+
+.thirdPage .text{
+	text-align: right;
+}
+
+.thirdPage .left{
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.thirdPage .left h2{
+	font-size: 2.7rem;
+	margin: 0;
+}
+
+.thirdPage .left h3{
+	font-weight: 400;
+}
+
+.thirdPage .right{
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.thirdPage .right img{
+	margin-left: 50px;
 }
 
 .secondPage .right h2{

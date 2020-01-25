@@ -9,31 +9,42 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav>
-      <ul>
-        <li>Home</li>
-        <li>O que fazemos?</li>
-        <li>Não sei</li>
-        <li>Redes Sociais</li>
-      </ul>
-    </nav>
     <div class="firstPage">
-		<img class="logo" src="logo.png"/>
-		<h1>Encontre conteúdo interessante e relevante sobre suas séries favoritas</h1>
-		<div>
-			<a href="https://www.figma.com/proto/Q7sexGxfYMamH18eOivBoN/Friendflix?node-id=6%3A4&scaling=scale-down"><img class="downloadImg" src="google-play.png"/></a>
-			<a href="https://www.figma.com/proto/Q7sexGxfYMamH18eOivBoN/Friendflix?node-id=6%3A4&scaling=scale-down"><img class="downloadImg" src="app-store.png"/></a>
-		</div>
-	</div>
-	<div class="secondPage">
-		<section>
-					<div class="left"><iframe width="600" height="380" src="https://www.youtube.com/embed/tjujvMkqWe4" frameborder="0" allowfullscreen></iframe></div>
-					<div class="right">
-						<h2>Discuta sobre suas séries favoritas</h2>
-						<h3>Descubra uma comunidade dedicada à sua série preferida e encontre outros fãs como você</h3>
-					</div>
-		</section>
-	</div>
-
+      <div class="backgroundVideo">
+        <video autoplay muted loop id="myVideo">
+          <source src="assets/video2.mp4" type="video/mp4">
+        </video>
+      </div>
+  		<img class="logo" src="assets/logo.png"/>
+  		<h1>Encontre conteúdo interessante e relevante sobre suas séries favoritas</h1>
+  		<div>
+  			<a href="https://www.figma.com/proto/Q7sexGxfYMamH18eOivBoN/Friendflix?node-id=6%3A4&scaling=scale-down">
+          <img class="downloadImg" src="assets/google-play.png"/>
+        </a>
+  			<a href="https://www.figma.com/proto/Q7sexGxfYMamH18eOivBoN/Friendflix?node-id=6%3A4&scaling=scale-down">
+          <img class="downloadImg" src="assets/app-store.png"/>
+        </a>
+  		</div>
+  	</div>
+  	<section class="secondPage allSections">
+  		<div class="left"><img height="600px" src="assets/app1.png"/></div>
+  		<div class="right">
+  			<div class="text">
+          <h2>Navegue por milhares de séries disponíveis no catálogo</h2>
+    			<h3>Descubra uma comunidade dedicada à sua série preferida e encontre outros fãs como você</h3>
+        </div>
+  		</div>
+  	</section>
+    <section class="thirdPage allSections">
+      <div class="left">
+        <div class="text">
+          <h2>Encontre o melhor sobre o que realmente te interessa</h2>
+          <h3>Você pode participar de comunidades sobre qualquer série que achar interessante e então receber notícias, compartilhar criações, discutir e expor sua opinião.</h3>
+        </div>
+      </div>
+      <div class="right">
+        <img height="600px" src="assets/app2.png"/>
+      </div>
+    </section>
   </body>
 </html>
