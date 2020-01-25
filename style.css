@@ -11,7 +11,9 @@ a{
 	text-decoration: none;
 }
 
-.firstPage{
+/* First Section */
+
+.firstSection{
 	width: 100%;
     height: 100vh;
 	text-align: center;
@@ -23,15 +25,16 @@ a{
 	margin-top: -60px;
   }
 
-.firstPage h1{
+.firstSection h1{
   font-weight: lighter;
   font-size: 24px;
 }
 
-.firstPage .backgroundVideo{
+.backgroundVideo{
 	position: absolute;
   	right: 0;
  	bottom: 0;
+
   	min-width: 100%;
   	min-height: 100%;
   	z-index: -1;
@@ -39,14 +42,15 @@ a{
   	overflow: hidden;
 }
 
-.firstPage .backgroundVideo video{
+.backgroundVideo video{
 	filter: blur(5px) brightness(.4);
 	margin: -5px -10px -10px -5px;
 }
 
 
 .logo{
-	width: 313px;
+	width: 100%;
+	max-width: 313px;
 	height: auto;
 	text-align: center;
 }
@@ -56,43 +60,57 @@ a{
   margin: 5px;
 }
 
+/* General Sections */
+
 .allSections{
-	width: 100%;
-	border-top: 10px solid rgba(255,255,255, 0.1);
-	padding: 50px 0 ;
 	display: flex;
+	width: 100%;
+	padding: 50px 0 ;
 	background: #000;
+	border-top: 10px solid rgba(255,255,255, 0.1);
+}
+
+.allSections h2{
+	font-size: 2.7rem;
+	margin: 0;
+}
+
+.allSections h3{
+	font-weight: 400;
 }
 
 .allSections .text{
 	max-width: 600px;
 }
 
-.secondPage .left{
+/*Second Section*/
+
+.secondSection .left{
 	flex: 1;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 }
 
-.secondPage .left img{
+.secondSection .left img{
+	height: 600px;
 	margin-right: 50px;
 }
 
-.secondPage .right{
+.secondSection .right{
 	flex: 1;
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
 }
 
-/*Third Page*/
+/*Third Section*/
 
-.thirdPage .text{
+.thirdSection .text{
 	text-align: right;
 }
 
-.thirdPage .left{
+.thirdSection .left{
 	flex: 1;
 	display: flex;
 	flex-flow: column;
@@ -100,31 +118,158 @@ a{
 	align-items: flex-end;
 }
 
-.thirdPage .left h2{
-	font-size: 2.7rem;
-	margin: 0;
-}
-
-.thirdPage .left h3{
-	font-weight: 400;
-}
-
-.thirdPage .right{
+.thirdSection .right{
 	flex: 1;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 }
 
-.thirdPage .right img{
+.thirdSection .right img{
+	height: 600px;
 	margin-left: 50px;
 }
 
-.secondPage .right h2{
+/* Footer */
+
+footer {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	height: 500px;
+	padding: 50px;
+	background: #000;
+	border-top: 10px solid rgba(255,255,255, 0.1);
+}
+
+footer h2{
 	font-size: 2.7rem;
 	margin: 0;
 }
 
-.secondPage .right h3{
+footer h3{
 	font-weight: 400;
+}
+
+footer input{
+	background: rgba(255, 255, 255, .15);
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.3rem;
+	font-weight: lighter;
+	color: rgba(255, 255, 255, .7);
+	width: 400px;
+	height: 25px;
+	border: 0;
+	border-radius: 10px 0 0 10px;
+	margin-top: 50px;
+	padding: 10px 20px;
+	outline: none;
+}
+
+footer button{
+	background: rgba(255, 255, 255, .35);
+	color: rgba(255, 255, 255, .7);
+	font-family: 'Roboto', sans-serif;
+	font-weight: lighter;
+	font-size: 1.2rem;
+	width: 75px;
+	height: 25px;
+    padding: 10px;
+    border: 0;
+	border-radius: 0 10px 10px 0;
+    vertical-align: bottom;
+    box-sizing: content-box;
+}
+
+
+/*media queries*/
+@media (min-aspect-ratio: 16/9) {
+    .backgroundVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .backgroundVideo { 
+        width:auto;
+        height: 100%;
+    }
+}
+
+
+@media (max-width: 1000px){
+	.allSections{
+		flex-flow: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.allSections .text{
+		text-align: center;
+	}
+
+	.secondSection .left img{
+		height: 450px;
+		margin: 20px 0;
+	}
+
+	.thirdSection{
+		flex-flow: column-reverse;
+	}
+
+	.thirdSection .right img{
+		height: 450px;
+		margin: 20px 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.backgroundVideo{
+		background: url('assets/videoScreenshot.png');
+        background-size: cover;
+        transform: scale(1.1);
+    	filter: blur(5px) brightness(.4);
+	}
+
+    .backgroundVideo video {
+        display: none;
+    }
+}
+
+@media (max-width: 650px){
+	.allSections .text{
+		padding: 0 20px;
+	}
+
+	.allSections h2{
+		font-size: 1.8rem;
+	}
+
+	.allSections h3{
+		font-size: 1rem;
+	}
+
+	footer{
+		padding: 10px;
+		text-align: center;
+	}
+
+	footer h2{
+		font-size: 1.8rem;
+	}
+
+	footer h3{
+		font-size: 1rem;
+	}
+
+	footer input{
+		width: 50%;
+		font-size: 1rem;
+	}
+
+	footer button{
+		font-size: 1rem;
+	}
 }

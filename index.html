@@ -2,6 +2,7 @@
 <html lang="pt" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Friendflix é um aplicativo para você discutir sobre suas séries favoritas com outras pessoas">
     <title>Friendflix</title>
 
@@ -9,10 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div class="firstPage">
+    <div class="firstSection">
       <div class="backgroundVideo">
         <video autoplay muted loop id="myVideo">
-          <source src="assets/video2.mp4" type="video/mp4">
+          <source src="assets/video.mp4" type="video/mp4">
         </video>
       </div>
   		<img class="logo" src="assets/logo.png"/>
@@ -26,8 +27,8 @@
         </a>
   		</div>
   	</div>
-  	<section class="secondPage allSections">
-  		<div class="left"><img height="600px" src="assets/app1.png"/></div>
+  	<section class="secondSection allSections">
+  		<div class="left"><img src="assets/app1.png"/></div>
   		<div class="right">
   			<div class="text">
           <h2>Navegue por milhares de séries disponíveis no catálogo</h2>
@@ -35,7 +36,7 @@
         </div>
   		</div>
   	</section>
-    <section class="thirdPage allSections">
+    <section class="thirdSection allSections">
       <div class="left">
         <div class="text">
           <h2>Encontre o melhor sobre o que realmente te interessa</h2>
@@ -43,8 +44,15 @@
         </div>
       </div>
       <div class="right">
-        <img height="600px" src="assets/app2.png"/>
+        <img src="assets/app2.png"/>
       </div>
     </section>
+    <footer>
+      <h2>Fique Ligado nas Novidades</h2>
+      <h3>Assine a Newsletter e não perca nenhuma atualização</h3>
+      <form>
+        <input type="email" placeholder="Endereço de Email" name="email"/><button>Enviar</button>
+      </form>
+    </footer>
   </body>
 </html>
